@@ -1,7 +1,8 @@
 # chat-app
 ### Real-time Chat application using websocket 
 ## server 
-### + Spring websocket
+### 
+    + Spring websocket
     + database mongo db
     + Spring mail
     + Google-OAuth2
