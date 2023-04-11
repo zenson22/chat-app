@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pay</title>
+	<link rel="stylesheet" href="css/stylepaycopy.css">
+</head>
+
+<body>
+	<body>
+	<div class="header">
+		<a href="index.html"><img class="muiten" src="img/login/Sign-Back-icon.png" alt="muiten"></a>
+		<h1 class="pay"> THANH TOÁN </h1>
+	</div>
+	<div class="container">
+		<div class="First">
+			<div class="open">
+				<div class="donhang">
+					<h2> Đơn hàng</h2>
+				</div>
+				<div class="table">
+					<table class="bang" border="0.5px">
+						<tr style="border-bottom: 1px solid rgb(39, 150, 184);"> 
+							<th>Sản Phẩm</th>
+							<th> Tên sản phẩm</th>
+							<th>Số lượng</th>
+							<th>Thành tiền</th>
+						</tr>
+						<tr>
+							<td><img src="img/pro/images/pr1.png"></td>
+							<td id="hd">Dầu tẩy trang</td>
+							<td>1</td>
+							<td id="price">350.000đ</td>
+						</tr>
+						<tr>
+							<td><img src="img/pro/images/pr2.png" alt="sp2"></td>
+							<td id="hd">Serum làm dịu da Skin 1004</td>
+							<td>1</td>
+							<td id="price">340.000đ</td>
+						</tr>
+						<tr>
+							<td><img src="img/pro/images/pr5.png"></td>
+							<td id="hd">Serum trị mụn innisfree</td>
+							<td>2</td>
+							<td id="price">1.200.000 đ</td>
+						</tr>
+						<tr>
+							<td><img src="img/pro/images/pr4.png"></td>
+							<td id="hd">Kem dưỡng ẩm </td>
+							<td>1</td>
+							<td id="price">300.000đ</td>
+						</tr>
+						<tr class="row-close" style="height: 60px">
+							<td></td>
+							<td colpan="2" id="minsum">Tổng thanh toán</td>
+							<td></td>
+							<td id="cost">3.000.000đ</td>
+						</tr>
+				 </table>
+				</div>
+			</div>
+		 <form class="form-pay" action="#" method="Post" name="Pay">
+			 <div class="secondly">
+				 <h4>Thông tin đặt hàng</h4>
+				 <div class="row">
+					 <div class="col">
+						 <h6 For="kh"> Tên khách hàng</h6>
+						 <input type="text" class="form-control" name= "tenkh" placeholder="Robert Kiyosaki - Sharon Lechter">
+					 </div>
+					 <div class="col">
+						 <h6 For="Địa chỉ"> Địa chỉ</h6>
+						 <input type="text" class="form-control" name= "diachi" placeholder="193 Vĩnh Hưng-Hoàng Mai-Hà Nội">
+					 </div>
+					 <div class="col">
+						 <h6 For="kh">Số điện thoại</h6>
+						 <input type="number" class="form-control" name= "sdt" placeholder="0393666222">
+					 </div>
+					 <div class="col">
+						 <h6 For="kh">Phương thức thanh toán</h6>
+						 <div class="checkpay">
+							 <form>
+								<input name="gender" type="radio" value="COD" />COD
+								<input name="gender" type="radio" value="Thetindung" />Thẻ tín dụng
+								<input name="gender" type="radio" value="Vidientu" />Ví điện tử
+							 </form>
+						 </div>
+					 </div>
+				 </div>
+			 </div>
+		</div>
+		 </form>
+		 <div class="close">
+               <p class="lead">* Vui lòng kiểm tra thông tin Khách hàng, Giỏ hàng thông tin trước khi Đặt hàng*</p>
+		 </div>
+		<div style="margin-left: 35px">
+				<div class="buynow"><a href="succeed.html">Đặt hàng</a></div>
+		</div>
+	</div>
+	<footer style="margin-top: 30px">
+      <div class="container">
+         <div style="margin-left: 80px;">
+            <h2>Hỗ trợ khách hàng</h2>
+            <a href="">Đơn vị vận chuyển</a> <br>
+            <a href="">Chính sách đổi trả</a>
+         </div>
+         <div style="margin-left: 190px;">
+            <h2>Về Beautyshop</h2>
+               <a href="">Giới thiệu Beautyshop</a> <br>
+               <a href="">Chính sách bảo mật</a> <br>
+               <a href="">Tuyển dụng</a>
+         </div>
+         <div style="margin-left: 190px;">
+            <h2>Địa chỉ</h2>
+               <a href="">Hotline: 0123456789</a> <br>
+               <a href="">193 Vĩnh Hưng</a>
+         </div>
+         <div style="margin-left: 190px;">
+            <h2>Liên kết</h2>
+               <img
+                  src="img/640px-Facebook-icon-1.png"
+                  height="40px" width="40px" />
+               <img src="img/Instagram_icon.png.webp" height="40px" width="40px" />
+         </div>
+      </div>
+   </footer>
+</body>
+</html>

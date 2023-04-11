@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Giohang</title>
+	<link rel="stylesheet" href="css/style_cart.css">
+</head>
+
+<body>
+	<div class="header">
+			<div id="logo">
+				<a href="index.html"><img src="img/logo.gif"></a>
+			</div>
+			<div id="search">
+			   <form class="form">
+				  <input type="text" class="form-control" style="width: 490px;height: 50px" placeholder="Tìm kiếm sản phẩm" />
+				  <a type="submit" class="bt"><img
+						src="img/Search_Icon.svg.png" height="30px"
+						alt="search"></a>
+			   </form>
+			</div>
+			<div class="profile-bar">
+         <a href="cart.html"><img src="img/index_cart.png" height="120px"></a>
+         <img src="img/login/profile-icon-white-22.jpg" height="60px" style="margin-bottom: 20px;">
+	     <div class="dropdown-content">
+			 <a id="aone" href="login.html"> Đăng nhập</a>
+			 <a id="atwo" href="register.html"> Đăng kí</a>
+	   </div> 
+      </div>
+	</div>
+	
+	<div class="container-1">
+		<a href="index.html"><img src="img/login/Sign-Back-icon.png" alt="muiten"></a>
+		<h1 style="text-shadow:5px 2px 4px grey" font-size="30px"> Giỏ hàng </h1>
+	</div>
+	<div class="table" style="margin-top:20px"> 
+		<table class= "bang">
+			<tr style="background: #91E15A";align="center">
+				<td><b>STT</b></td>
+				<td><b>Sản phẩm</b></td>
+				<td><b>Tên sản phẩm</b></td>
+				<td><b>Giá tiền</b></td>
+				<td><b>Số lượng</b></td>
+				<td><b>Thành tiền</b></td>
+			</tr>
+			<tr>
+				<td id="stt">1</td>
+				<td><img src="img/pro/images/pr1.png"></td>
+				<td id="hd">Dầu tẩy trang</td>
+				<td id="cost">350.000đ</td>
+				<td>
+					<div class="input-group" style="text-align: center">
+    					<span onclick="this.parentNode.querySelector('input[type=number]').stepDown()" style="cursor:pointer"> -    
+						</span>
+    					<input style="text-align: right;width: 36px" type="number" value="1"  min="1" max="100">
+    					<span onclick="this.parentNode.querySelector('input[type=number]').stepUp()" style="cursor:pointer"> +   
+						</span>
+					</div>
+				</td>
+				<td id="price">350.000đ</td>
+			</tr>
+			<tr>
+				<td id="stt">2</td>
+				<td><img src="img/pro/images/pr2.png"></td>
+				<td id="hd">Serum làm dịu da Skin 1004</td>
+				<td id="cost">340.000đ</td>
+				<td>
+					<div class="input-group" style="text-align: center">
+    					<span class="input-group-text btn btn-danger" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" style="cursor:pointer"> -     </span>
+    					<input style="text-align: right;width: 36px" type="number" value="1" class="form-control text-center" min="1" max="100">
+    					<span class="input-group-text btn btn-success" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" style="cursor:pointer"> +    </span>
+					</div>
+				</td>
+				<td id="price">340.000đ</td>
+			</tr>
+			<tr>
+				<td id="stt">3</td>
+				<td><img src="img/pro/images/pr5.png"></td>
+				<td id="hd">Serum trị mụn innisfree</td>
+				<td id="cost">600.000đ</td>
+				<td>
+					<div class="input-group" style="text-align: center">
+    					<span class="input-group-text btn btn-danger" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" style="cursor:pointer"> -     </span>
+    					<input style="text-align: right;width: 36px" type="number" value="1" class="form-control text-center" min="0" max="100">
+    					<span class="input-group-text btn btn-success" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" style="cursor:pointer"> +    </span>
+					</div>
+				</td>
+				<td id="price">1.200.000đ</td>
+			</tr>
+			<tr>
+				<td id="stt">4</td>
+				<td><img src="img/pro/images/pr4.png"></td>
+				<td id="hd">Kem dưỡng ẩm </td>
+				<td id="cost">300.000đ</td>
+				<td>
+					<div class="input-group" style="text-align: center">
+    					<span class="input-group-text btn btn-danger" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" style="cursor:pointer;"> -     </span>
+    					<input  style="text-align: right;width: 36px" type="number" value="1" class="form-control text-center" min="1" max="100">
+    					<span class="input-group-text btn btn-success" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" style="cursor:pointer"> +    </span>
+					</div>
+				</td>
+				<td id="price">300.000đ</td>
+			</tr>
+		</table>
+	</div>
+	<div class="sum">
+		<h1> Tạm tính: 3.000.000đ</h1>
+		<p class="vat"> (Đã bao gồm thuế VAT)</p>
+		<div style="margin-left: 35px">
+				<div class="buynow"><a href="paycopy.html"><span
+							class="glyphicon glyphicon-shopping-cart"></span>Thanh Toán</a></div>
+			</div>
+	</div>
+	<footer>
+		<div class="container">
+         <div style="margin-left: 80px;">
+            <h2>Hỗ trợ khách hàng</h2>
+            <a href="">Đơn vị vận chuyển</a> <br>
+            <a href="">Chính sách đổi trả</a>
+         </div>
+         <div style="margin-left: 190px;">
+            <h2>Về Beautyshop</h2>
+               <a href="">Giới thiệu Beautyshop</a> <br>
+               <a href="">Chính sách bảo mật</a> <br>
+               <a href="">Tuyển dụng</a>
+         </div>
+         <div style="margin-left: 190px;">
+            <h2>Địa chỉ</h2>
+               <a href="">Hotline: 0123456789</a> <br>
+               <a href="">193 Vĩnh Hưng</a>
+         </div>
+         <div class="mg" style="margin-left: 190px;">
+			 <h2>Liên kết</h2>
+               <img src="img/Facebook_icon_2013.svg.png" height="40px" width="40px" />
+               <img src="img/Instagram_icon.png.webp" height="40px" width="40px" />
+         </div>
+      </div>
+	</footer>
+      
+</body>
+</html>
