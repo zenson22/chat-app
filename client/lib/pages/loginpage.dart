@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../apis/http.dart';
 import '../helper/helper_function.dart';
 import 'homepage.dart';
 
@@ -23,6 +24,21 @@ class _LoginScreenState extends State<LoginScreen> {
   String password = "";
   bool _isLoding = false;
   AuthServices authServices = AuthServices();
+
+  String response = "";
+
+  createUser() async {
+    var result = await http_post("login", {
+      "username": email,
+      "password": password,
+    });
+    if(result.ok)
+    {
+      setState(() {
+        response = result.data['status'];
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 widthFactor: 0.6,
                                 child: TextFormField(
                                   decoration: textInputDecoration.copyWith(
-                                      labelText: "Email",
+                                      hintText: "Email",
                                       prefixIcon: Icon(
                                         Icons.email,
                                         color: Theme.of(context).primaryColor,
@@ -88,13 +104,13 @@ class _LoginScreenState extends State<LoginScreen> {
                                       email = val;
                                     });
                                   },
-                                  validator: (val) {
+                                  /*validator: (val) {
                                     return RegExp(
                                                 r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                                             .hasMatch(val!)
                                         ? null
                                         : "Please enter a valid email";
-                                  },
+                                  },*/
                                 ),
                               ),
                               const SizedBox(
@@ -105,18 +121,18 @@ class _LoginScreenState extends State<LoginScreen> {
                                 child: TextFormField(
                                   obscureText: true,
                                   decoration: textInputDecoration.copyWith(
-                                      labelText: "Password",
+                                      hintText: "Password",
                                       prefixIcon: Icon(
                                         Icons.lock,
                                         color: Theme.of(context).primaryColor,
                                       )),
-                                  validator: (val) {
+                                  /*validator: (val) {
                                     if (val!.length < 6) {
                                       return "Password must be at least 6 characters";
                                     } else {
                                       return null;
                                     }
-                                  },
+                                  },*/
                                   onChanged: (val) {
                                     setState(() {
                                       password = val;
@@ -143,7 +159,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                         color: Colors.white, fontSize: 16),
                                   ),
                                   onPressed: () {
-                                    login();
+                                    createUser();
                                   },
                                 ),
                               ),

@@ -5,6 +5,7 @@ import 'package:chatchat/services/auth_services.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../apis/http.dart';
 import '../widgets/widgets.dart';
 
 class Registerpage extends StatefulWidget {
@@ -78,7 +79,7 @@ class _RegisterpageState extends State<Registerpage> {
                                 widthFactor: 0.6,
                                 child: TextFormField(
                                   decoration: textInputDecoration.copyWith(
-                                      labelText: "Full Name",
+                                      hintText: "Full Name",
                                       prefixIcon: Icon(
                                         Icons.person,
                                         color: Theme.of(context).primaryColor,
@@ -104,7 +105,7 @@ class _RegisterpageState extends State<Registerpage> {
                                 widthFactor: 0.6,
                                 child: TextFormField(
                                   decoration: textInputDecoration.copyWith(
-                                      labelText: "Email",
+                                      hintText: "Email",
                                       prefixIcon: Icon(
                                         Icons.email,
                                         color: Theme.of(context).primaryColor,
@@ -131,7 +132,7 @@ class _RegisterpageState extends State<Registerpage> {
                                 child: TextFormField(
                                   obscureText: true,
                                   decoration: textInputDecoration.copyWith(
-                                      labelText: "Password",
+                                      hintText: "Password",
                                       prefixIcon: Icon(
                                         Icons.lock,
                                         color: Theme.of(context).primaryColor,
